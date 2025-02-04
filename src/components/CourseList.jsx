@@ -1,4 +1,5 @@
-import './App.css'
+import CourseCard from './CourseCard'
+
 const courses = [
 	{
 		id: 1,
@@ -34,8 +35,13 @@ const courses = [
 	},
 ]
 
-function App() {
-	return <h1 className="">01-CourseList-project: starter file</h1>
+function CourseList() {
+	return (
+		<div className="course-list">
+			{courses.map(course => {
+				return <CourseCard key={course.id} />
+			})}
+		</div>
+	)
 }
-
-export default App
+export default CourseList
