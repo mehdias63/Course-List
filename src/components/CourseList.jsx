@@ -8,7 +8,7 @@ const courses = [
 		imageUrl: '/images/img1.jpg',
 		rate: '4.5',
 		tags: ['langauges'],
-		start: '2021-08-01T20:46:30.615Z',
+		start: '2021-08-05T20:46:30.615Z',
 		status: 'Completed',
 	},
 	{
@@ -30,7 +30,7 @@ const courses = [
 		imageUrl: '/images/img3.jpg',
 		rate: '3.9',
 		tags: ['Marketing', 'Finance'],
-		start: '2023-07-01T20:46:30.615Z',
+		start: '2023-07-09T20:46:30.615Z',
 		status: 'Active',
 	},
 ]
@@ -38,9 +38,9 @@ const courses = [
 function CourseList() {
 	return (
 		<div className="course-list">
-			{courses.map(course => {
-				return <CourseCard key={course.id} />
-			})}
+			{courses.map(course => (
+				<CourseCard key={course.id} course={course} />
+			))}
 		</div>
 	)
 }
